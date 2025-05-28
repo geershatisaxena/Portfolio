@@ -25,27 +25,32 @@
     
     <style>
         :root {
-            /* Modern color scheme with better contrast */
-            --primary-color: #f80a42;  /* Vibrant blue */
-            --primary-dark: #02c67b;
-            --secondary-color: #7c3aed;  /* Purple */
-            --accent-color: #ec4899;  /* Pink */
-            --light-color: #f8fafc;
-            --dark-color: #0f172a;
-            --text-color: #334155;
-            --text-light: #64748b;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --bg-color: #ffffff;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --card-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            
-            /* Font stack */
-            --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-                          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
-                          'Helvetica Neue', sans-serif;
+         --primary-color: #eb0fa5;  /* Rich terracotta */
+    --primary-dark: #f00eb8;   /* Deep terracotta */
+    --secondary-color: #cb0c68; /* Muted olive green */
+    --accent-color: #e007a6;   /* Warm mustard yellow */
+    --light-color: #020202;    /* Soft off-white for backgrounds */
+    --dark-color: #292524;     /* Dark taupe for depth */
+    --text-color: #44403c;     /* Warm gray for text */
+    --text-light: #78716c;     /* Lighter warm gray for secondary text */
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Unchanged */
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Unchanged */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Unchanged */
+    --bg-color: #ffffff;       /* White background (unchanged) */
+    --card-bg: #ffffff;        /* White card background (unchanged) */
+    --border-color: #d6d3d1;   /* Soft taupe for borders */
+    --card-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Updated gradient */
+    
+    /* Font stack (unchanged) */
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+                  'Helvetica Neue', sans-serif;
+
+
+/* Font stack */
+--font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+              Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
         }
 
         [data-theme="dark"] {
@@ -1515,7 +1520,20 @@
                     </div>
                 </div>
             </div>
-            
+             <div class="skill-card animate fade-in-up">
+                <img src="data:image/png;base64,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" alt="Jupyter Notebook" class="skill-icon">
+                <h3 class="skill-title">Jupyter Notebook</h3>
+                <p class="skill-description">Mastered an essential tool for data science and machine learning—perfect for writing and running Python code, visualizing data, and documenting insights all in one place. It's been a game-changer for interactive coding and data storytelling 💻</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 98%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Proficient</span>
+                        <span>98%</span>
+                    </div>
+                </div>
+            </div>
             <!-- JavaScript -->
             <div class="skill-card animate fade-in-up delay-2">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
@@ -1531,13 +1549,13 @@
                     </div>
                 </div>
             </div>
-            <div class="skill-card animate fade-in-up">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///8TB1T/ygDnBIgAAEsAAE0AAFERAlOamK14dZUNAFIlHF8AAEUAAEj5+Pu1s8Xv7/L/4o7/+u7/+P3mAIHBwM4AAEC9u8v/45Pd3OWoprv2udfRz9yKh6P/67LtYqrzmsWBfp0AADZ6dpgjGV7n5uwAADr/9NP/4Ib//PaWlKv2s9TtWqflAHz72uoAADSkVm4TAAACRklEQVR4nO3d0U7iQBSA4SIFRVsFhaKuq8Iu6HZ19/3fznhXMyeZ06Tj6Zn8//VkmA8SLsjpUBRERERERETkuV/zSdD5hfWphmwxOw+a/7Y+1ZAtZvl/hgi9h9B/CP2H0LbDdhO2vey1x7iFV8c6bL/stcfIhXV4ukmF8GsIbUOoCaFtCDUhtA2hJoS2IdSE0DaEmhDahlATQtsQakJoG0JNCG1DqAmhbQg1IbQNoSZL4U+h3aa7Ii58OJPq7mEpLMtZUNN2V8SFbVMG1XV3WsNSOD8NX7v88v7HhWelcP45QoQIEfYQRqe+vAsPW6nu+b0L4yFEmDaEmhAiTBtCTQgRpg1hUby8rsJe/2QkfDyRukaIECFChAgRIkSIECFChAgRIkT4zcKX1W3YKqdfouLlL2yPVViTk3B5J9Vd4V0YD2HKEA4TwpQhHCaEKUNYFHf3Un7uTVRM0DbCBO3RzxMlQ0xBx/Mu/Pv2JHSTkfB5PQ1ar3MXTqcIESJEiBAhQoQIESJEiBAhQnfC97VQTsJ/P6S6e3gXxkOYMoQIdSFMGUKEuhCmDCHCzzaLnZCf+VLFbWZVePfirMxK6HwKGiFChCMQ7oVnDf73FNbCt+1kLMLlg1S/exPvF0K7sQjjxYWWIdSE0DaEmhDahlATQtsQakJoG0JNCG1DqAmhbQg1IbQNoSaEtiHUhNA2hJoQ2oZQE0LbEGpqhf+ArKqchJeHsGW/4cWEfc89UZYh9B9C/yH0H0L/5S9shPat9amIiIiIiMiyD1xVoVo6EtYqAAAAAElFTkSuQmCC" alt="Pandas" class="skill-icon">
-                <h3 class="skill-title">Pandas</h3>
-                <p class="skill-description">Skilled in using Pandas for efficient data manipulation, cleaning, and analysis in Python. Experienced in handling large datasets, performing aggregations, and transforming data for insights.</p>
+             <div class="skill-card animate fade-in-up">
+                <img src="data:image/png;base64,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" alt="Sreamlit" class="skill-icon">
+                <h3 class="skill-title">Numpy</h3>
+                <p class="skill-description">Mastered efficient numerical computing, array operations, and data manipulation—laying a strong foundation for data science and machine learning. 🔢📊</p>
                 <div class="skill-level">
                     <div class="skill-level-bar">
-                        <div class="skill-level-progress" style="width: 98%"></div>
+                        <div class="skill-level-progress" style="width: 90%"></div>
                     </div>
                     <div class="skill-level-text">
                         <span>Proficient</span>
@@ -1545,8 +1563,40 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="skill-card animate fade-in-up">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///8TB1T/ygDnBIgAAEsAAE0AAFERAlOamK14dZUNAFIlHF8AAEUAAEj5+Pu1s8Xv7/L/4o7/+u7/+P3mAIHBwM4AAEC9u8v/45Pd3OWoprv2udfRz9yKh6P/67LtYqrzmsWBfp0AADZ6dpgjGV7n5uwAADr/9NP/4Ib//PaWlKv2s9TtWqflAHz72uoAADSkVm4TAAACRklEQVR4nO3d0U7iQBSA4SIFRVsFhaKuq8Iu6HZ19/3fznhXMyeZ06Tj6Zn8//VkmA8SLsjpUBRERERERETkuV/zSdD5hfWphmwxOw+a/7Y+1ZAtZvl/hgi9h9B/CP2H0LbDdhO2vey1x7iFV8c6bL/stcfIhXV4ukmF8GsIbUOoCaFtCDUhtA2hJoS2IdSE0DaEmhDahlATQtsQakJoG0JNCG1DqAmhbQg1IbQNoSZL4U+h3aa7Ii58OJPq7mEpLMtZUNN2V8SFbVMG1XV3WsNSOD8NX7v88v7HhWelcP45QoQIEfYQRqe+vAsPW6nu+b0L4yFEmDaEmhAiTBtCTQgRpg1hUby8rsJe/2QkfDyRukaIECFChAgRIkSIECFChAgRIkT4zcKX1W3YKqdfouLlL2yPVViTk3B5J9Vd4V0YD2HKEA4TwpQhHCaEKUNYFHf3Un7uTVRM0DbCBO3RzxMlQ0xBx/Mu/Pv2JHSTkfB5PQ1ar3MXTqcIESJEiBAhQoQIESJEiBAhQnfC97VQTsJ/P6S6e3gXxkOYMoQIdSFMGUKEuhCmDCHCzzaLnZCf+VLFbWZVePfirMxK6HwKGiFChCMQ7oVnDf73FNbCt+1kLMLlg1S/exPvF0K7sQjjxYWWIdSE0DaEmhDahlATQtsQakJoG0JNCG1DqAmhbQg1IbQNoSaEtiHUhNA2hJoQ2oZQE0LbEGpqhf+ArKqchJeHsGW/4cWEfc89UZYh9B9C/yH0H0L/5S9shPat9amIiIiIiMiyD1xVoVo6EtYqAAAAAElFTkSuQmCC" alt="Pandas" class="skill-icon">
+                <h3 class="skill-title">Pandas</h3>
+                <p class="skill-description">Skilled in using Pandas for efficient data manipulation, cleaning, and analysis in Python. Experienced in handling large datasets, performing aggregations, and transforming data for insights.</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Proficient</span>
+                        <span>90%</span>
+                    </div>
+                </div>
+            </div>
+             <div class="skill-card animate fade-in-up">
+                <img src="https://cdn-icons-gif.flaticon.com/14183/14183454.gif" alt="Pandas" class="skill-icon">
+                <h3 class="skill-title">Data Analytics</h3>
+                <p class="skill-description">Gained hands-on experience in collecting, processing, and interpreting data to drive smarter, data-informed decisions. From identifying trends to uncovering insights, this journey has deepened my ability to turn raw data into real business value.</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 80%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Proficient</span>
+                        <span>80%</span>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
+
         
     </section>
       <section id="skills" class="skills-section">
@@ -1568,10 +1618,52 @@
                     </div>
                 </div>
             </div>
+            <div class="skill-card animate fade-in-up">
+                <img src="https://cdn-icons-gif.flaticon.com/15332/15332448.gif" alt="Communication" class="skill-icon">
+                <h3 class="skill-title">Leadership</h3>
+                <p class="skill-description"> Learning to inspire, guide, and support others while driving results has been a key step in my professional development. 🌟🤝</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 98%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Excellent</span>
+                        <span>98%</span>
+                    </div>
+                </div>
+            </div>
              <div class="skill-card animate fade-in-up">
                 <img src="https://cdn-icons-gif.flaticon.com/16045/16045888.gif" alt="Communication" class="skill-icon">
                 <h3 class="skill-title">Time Management</h3>
                 <p class="skill-description">Effectively prioritizing tasks, meeting deadlines, and staying organized has boosted my productivity and focus. ⏰✅</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 98%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Excellent</span>
+                        <span>98%</span>
+                    </div>
+                </div>
+            </div>
+             <div class="skill-card animate fade-in-up">
+                <img src="https://cdn-icons-png.freepik.com/256/18254/18254674.png?uid=R144965536&ga=GA1.1.1170794166.1748157297&semt=ais_incoming" alt="Active Listening" class="skill-icon">
+                <h3 class="skill-title">Active Listening</h3>
+                <p class="skill-description">Learning to fully engage, understand, and respond thoughtfully has improved my communication, collaboration, and leadership abilities. 👂💬</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar">
+                        <div class="skill-level-progress" style="width: 98%"></div>
+                    </div>
+                    <div class="skill-level-text">
+                        <span>Excellent</span>
+                        <span>98%</span>
+                    </div>
+                </div>
+            </div>
+             <div class="skill-card animate fade-in-up">
+                <img src="https://cdn-icons-gif.flaticon.com/15689/15689551.gif" alt="Active Listening" class="skill-icon">
+                <h3 class="skill-title">Problem Solving</h3>
+                <p class="skill-description">Developing the ability to analyze challenges, think critically, and find effective, creative solutions is essential for personal and professional growth. 🧠🛠️</p>
                 <div class="skill-level">
                     <div class="skill-level-bar">
                         <div class="skill-level-progress" style="width: 98%"></div>
